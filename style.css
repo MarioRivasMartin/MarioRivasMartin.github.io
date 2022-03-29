@@ -1,0 +1,86 @@
+
+/*======================================
+				BACKGROUND
+======================================*/
+.fondo{ background: linear-gradient(to bottom,rgb(51, 51, 51),black);}	
+
+hr {height:5px;
+    width: 98%;
+    border-radius: 5px;
+    color= #FCE6FA; background-color: #FCE6FA;}
+
+
+/*======================================
+				TIPOGRAFÍA
+======================================*/
+@font-face{ /*ESTILO TITULO*/
+	font-family: "Squada+One"; 
+	src: url("multimedia/Squada_One/SquadaOne-Regular.ttf");
+}
+.titulo { font-family: "Squada+One", bold; font-size: 200%; color: rgb(226, 242, 255); margin-left: 2.5%;
+} /*TITULO GENERICO*/
+
+
+@font-face{ /*ESTILO TEXTO*/
+	font-family: "Tomorrow"; 
+	src: url("multimedia/Tomorrow/Tomorrow-Light.ttf");
+}
+.texto { font-family: "Tomorrow", bold; font-size: 115%; color: rgb(234, 255, 255); margin-left: 5%; margin-right: 5%; text-align: justify;
+} /*TEXTO GENERICO*/
+
+
+
+/*======================================
+	   ESTILO ENCABEZADO PRINCIPAL
+======================================*/
+.alostgamer { font-family: "Squada+One", bold; font-size: 500%; color: rgb(226, 242, 255); margin-left: 2.5%;
+}
+
+
+
+/*======================================
+  	  ALINEAR 2 IMGs CENTRALIZADAS
+======================================*/
+
+.spoiler img{ margin-left:12%;
+	width: 33%; height: 33%;}
+
+
+
+/*========================================================
+  ALINEAR 3 ELEMENTOS (IMAGENES + TÍTULOS + DESCRIPCIÓN)
+========================================================*/
+div.redes_sociales-group {
+    vertical-align: top;
+    display: inline-block;
+
+    width: 21%;
+    margin-left: 9.7%;
+}
+
+div.redes_sociales-group > img {width: 100%; height: 100%;}
+
+a > h4 {
+	display: block;
+
+font-family: "Squada+One", bold; font-size: 200%; color: rgb(226, 242, 255); text-align: center;
+}
+
+a > span {
+    display: block;
+
+font-family: "Tomorrow"; font-size: 115%; color: rgb(234, 255, 255); text-align: justify;
+}
+
+
+
+/*========================================================
+  	    ALINEAR EN TABLA (IMAGEN + TITULO & TEXTO)
+========================================================*/
+
+td > img { width: 40%; height: 40%;
+					vertical-align: middle;
+					float: right;
+					margin-right: 10%;}
+td > h4 { vertical-align: top; }
+td > p { vertical-align: middle; }

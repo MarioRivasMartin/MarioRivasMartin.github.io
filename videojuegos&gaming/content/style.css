@@ -1,0 +1,272 @@
+
+/*======================================
+				BACKGROUND
+======================================*/
+.fondo {background-color: #06011A  ;
+		border-color:  #FFFFFF    ;
+  border-style: outset;}
+
+hr {height:5px;
+    width: 98%;
+    border-radius: 5px;
+    color= #FCE6FA; background-color: #FCE6FA;}
+
+ul > hr {height:1px;
+    width: 98%;
+    border-radius: 5px;
+    color= #FCE6FA; background-color: #FCE6FA;}
+
+/*======================================
+				TIPOGRAFÍA
+======================================*/
+  @font-face{ /*ESTILO TITULO*/
+	font-family: "Squada+One"; 
+	src: url("../../multimedia/Squada_One/SquadaOne-Regular.ttf");
+}
+.titulo { font-family: "Squada+One", bold; font-size: 200%; color: rgb(226, 242, 255); margin-left: 2.5%;
+} /*TITULO GENERICO*/
+h1.titulo {text-align: center;}
+
+
+@font-face{ /*ESTILO TEXTO*/
+	font-family: "Tomorrow"; 
+	src: url("../../multimedia/Tomorrow/Tomorrow-Light.ttf");
+}
+.texto { font-family: "Tomorrow", bold; font-size: 115%; color: rgb(234, 255, 255); margin-left: 5%; margin-right: 5%; text-align: justify;
+} /*TEXTO GENERICO*/
+footer.texto { text-align:  center;
+    font-size: 150%
+    }
+
+
+
+/*=============================================
+  	    	CREAR MENÚ LATERAL SMART
+=============================================*/
+input#abrir-cerrar {
+    visibility:hidden;
+    position: absolute;
+    top: -9999px;
+}
+
+
+label[for="abrir-cerrar"] {
+    cursor:pointer;
+    padding: 1rem;
+    background-color:#013337;
+    color:#fff;
+
+}
+
+li label[for="abrir-cerrar"] {
+    cursor:pointer;
+    padding: 1rem;
+    background-color:#00324b;
+    color:#fff;
+}
+
+.cerrar {
+    display:none;
+}
+
+#sidebar {
+    width:0;
+}
+
+#contenido {
+    margin-left:0;
+}
+
+input#abrir-cerrar:checked ~ #sidebar {
+    width:300px;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"], input#abrir-cerrar:checked ~ #contenido {
+    margin-left:300px;
+    transition: margin-left .4s;
+}
+
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .cerrar {
+    display:inline;
+}
+
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
+    display:none;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #00324b;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding: 1rem 0;
+    box-sizing:border-box;
+}
+
+.sidebar .boton-cerrar {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+}
+
+.sidebar ul, .sidebar li{
+    margin:0;
+    padding:0;
+    list-style:none inside;
+}
+
+.sidebar ul {
+    margin: 4rem auto;
+    display: block;
+    width: 80%;
+    min-width:200px;
+}
+
+.sidebar a {
+    display: block;
+    font-size: 100%;
+    color: #eee;
+    text-decoration: none;
+    
+}
+
+.sidebar a:hover{
+    color:#fff;
+    background-color: #f90;
+
+}
+#contenido {
+    transition: margin-left .4s;
+    padding: 1rem;
+}
+
+.abrir-cerrar {
+    color: #2E88C7;
+    font-size:1rem;   
+}
+
+
+
+/*=======================
+ IMAGEN + TEXTO INTERNO
+=======================*/
+img {display: block; margin: auto;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border-radius:  20px;
+    width: 100%;
+    height: 100%;
+  }
+
+
+.contenedor {
+  display: block; margin: auto;
+  width: 50%;
+  text-align: center;
+  position: relative;
+}
+
+.contenedor:hover .image {
+    opacity: 0.3;
+  }
+  
+  .contenedor:hover .middle {
+    opacity: 1;
+  }
+  
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+    font-family: "Tomorrow", bold; font-size: 115%; color: rgb(234, 255, 255);
+  background-color: #210202;
+  padding: 16px 32px;
+}
+
+div.contenedor {
+  width: 30%;
+  height: 30%;
+}
+
+
+
+/*======================================
+		Tabla Centrada en Página
+======================================*/
+
+section.tabla {
+    text-align: center;
+}
+section.tabla table {
+    margin: 0 auto;
+}
+
+table {
+    border-color: rgb(255, 248, 240);
+    border-style: solid;
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+td {
+    border-color: rgb(255, 248, 240);
+    border-style:solid;
+    border-width: 1px;
+}
+
+table tr:first-child td:nth-child(2n) {
+    text-align: center;
+    font-weight: bold;
+}
+
+table tr:first-child td:nth-child(2n+1) {
+    background-color: rgb(255, 248, 240);
+}
+
+table tr:nth-child(1n+2) td:nth-child(1n) {
+    text-align: left;
+    padding-left:  15px;
+}
+
+table tr:nth-child(1n+2) td:nth-child(2n) {
+    text-align: right;
+    padding-right:  15px;
+
+}
+
+table {
+    width: 50%;
+    height: 100%%;
+}
+
+
+
+/*======================================
+            Estilo de footer
+======================================*/
+
+footer > a:link, footer > a:visited, footer > a:active {
+    text-decoration:none;
+    color: #2E88C7;
+}
